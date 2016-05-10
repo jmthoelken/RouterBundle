@@ -19,7 +19,6 @@ class SetRouterPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container)
     {
-        $container->setAlias('router', 'ongr_router.chain_router');
         $container
             ->getDefinition('ongr_router.elasticsearch_route_provider')
             ->addMethodCall(
